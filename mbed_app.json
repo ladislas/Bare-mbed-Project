@@ -1,0 +1,10 @@
+{
+	"target_overrides": {
+		"*": {
+			"target.features_remove": [
+				"BLE",
+				"CRYPTOCELL310"
+			]
+		}
+	}
+}
