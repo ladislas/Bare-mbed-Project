@@ -11,7 +11,7 @@ This repository can be used as a starting template for [mbed](https://github.com
 
 It's the little cousin of [Bare Arduino Project](https://github.com/ladislas/Bare-Arduino-Project)
 
-## Installation & Usage
+## Installation
 
 Before starting, make sure you've read [mbed documentation](https://os.mbed.com/docs/mbed-os/v5.13/introduction/index.html).
 
@@ -33,10 +33,17 @@ $ pip3 install -U --user https://github.com/ARMmbed/mbed-cli/archive/master.zip
 
 ### 2. Install arm-none-eabi-gcc
 
+For macOS:
+
 ```bash
 $ brew tap ArmMbed/homebrew-formulae
 $ brew install arm-none-eabi-gcc
 ```
+For Windows & Linux:
+
+You can download the toolchain here: 
+
+> https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads
 
 ### 3. Import project
 
@@ -47,7 +54,7 @@ $ cd to/where/the/project/should/be
 $ mbed import https://github.com/ladislas/Bare-mbed-Project my-project-name
 ```
 
-### 4. Publish to Github
+### 4. Publish to Github (optional)
 
 [Create a Github repository](https://github.com/new) and push to it:
 
@@ -56,7 +63,9 @@ $ git remote set-url origin https://github.com/{{ GITHUB USERNAME }}/{{ REPO NAM
 $ git push --set-upstream origin master
 ```
 
-### 5. Edit `.mbed`
+## Usage
+
+### 1. Edit `.mbed`
 
 Don't forget to set your target and favorite toolchain, for example:
 
@@ -65,6 +74,20 @@ ROOT=.
 TARGET=NUCLEO_WB55RG
 TOOLCHAIN=GCC_ARM
 ```
+
+Before running `mbed compile`.
+
+### 2. Edit `.mbedignore`
+
+To speed up compilation time, we've setup a `.mbedignore` file that removes some files from the compilation process.
+
+If you get error about missing headers when compiling, make sure the header's directory is not set in the `.mbedignore` file.
+
+Note that it has no impact on binary size after linking (or should not have anyway...).
+
+### 3. Writing tests
+
+> coming soon...
 
 ## Notes
 
