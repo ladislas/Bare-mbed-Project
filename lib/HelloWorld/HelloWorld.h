@@ -25,7 +25,7 @@ class HelloWorld {
 	 */
 	struct Data {
 		DigitalOut led;
-		uint32_t sleepTime;   // hello
+		uint32_t sleepTime;
 	};
 
   public:
@@ -33,6 +33,8 @@ class HelloWorld {
 	~HelloWorld(void) {};
 
 	void start(void);
+
+	char const *world = "Hello, World!\n";
 
   private:
 	Thread thread1;
@@ -45,6 +47,6 @@ class HelloWorld {
 
 	static void blink(Data *data);
 
-};   // class HelloWorld
+};	 // class HelloWorld
 
 #endif

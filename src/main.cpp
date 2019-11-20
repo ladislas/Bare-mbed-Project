@@ -8,7 +8,7 @@ int main(void) {
 	hello.start();
 
 	while (true) {
-		printf("Hello, World!\n");
+		printf(hello.world);
 		rtos::ThisThread::sleep_for(1000);
 	}
 

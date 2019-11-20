@@ -24,7 +24,7 @@ void HelloWorld::start(void) {
 	thread2.start(callback(blink, &led2Data));
 	thread3.start(callback(blink, &led3Data));
 
-}   // void start(void)
+}	// void start(void)
 
 /**
  * @brief Blink a led for a specified amount of time
@@ -38,4 +38,4 @@ void HelloWorld::blink(Data *data) {
 		rtos::ThisThread::sleep_for(data->sleepTime);
 	}
 
-}   // void blink(Data * data)
+}	// void blink(Data * data)
