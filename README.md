@@ -41,7 +41,7 @@ $ brew install arm-none-eabi-gcc
 ```
 For Windows & Linux:
 
-You can download the toolchain here: 
+You can download the toolchain here:
 
 > https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads
 
@@ -71,6 +71,7 @@ Don't forget to set your target and favorite toolchain, for example:
 
 ```bash
 ROOT=.
+MBED_OS_DIR=./lib/mbed-os
 TARGET=NUCLEO_WB55RG
 TOOLCHAIN=GCC_ARM
 ```
