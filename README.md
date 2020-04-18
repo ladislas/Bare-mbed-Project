@@ -54,12 +54,20 @@ $ cd to/where/the/project/should/be
 $ mbed import https://github.com/ladislas/Bare-mbed-Project my-project-name
 ```
 
+Alternatively, you can use git to do the same with the advantage of making a shallow clone to save space and time:
+
+```bash
+$ git clone https://github.com/ladislas/Bare-mbed-Project my-project-name
+$ cd my-project-name
+$ git clone --depth=1 https://github.com/ARMmbed/mbed-os ./lib/mbed-os
+```
+
 ### 4. Publish to Github (optional)
 
 [Create a Github repository](https://github.com/new) and push to it:
 
 ```bash
-$ git remote set-url origin https://github.com/{{ GITHUB USERNAME }}/{{ REPO NAME }}
+$ git remote set-url origin https://github.com/{{ GITHUB USERNAME }}/my-project-name
 $ git push --set-upstream origin master
 ```
 
@@ -70,10 +78,10 @@ $ git push --set-upstream origin master
 Don't forget to set your target and favorite toolchain, for example:
 
 ```bash
-ROOT=.
 MBED_OS_DIR=./lib/mbed-os
 TARGET=NUCLEO_WB55RG
 TOOLCHAIN=GCC_ARM
+ROOT=.
 ```
 
 Before running `mbed compile`.
