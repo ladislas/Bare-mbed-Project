@@ -13,19 +13,19 @@ It's the little cousin of [Bare Arduino Project](https://github.com/ladislas/Bar
 
 ## Installation
 
-Before starting, make sure you've read [mbed documentation](https://os.mbed.com/docs/mbed-os/v5.13/introduction/index.html).
+Before starting, make sure you've read [mbed documentation](https://os.mbed.com/docs/mbed-os/v6.1/introduction/index.html).
 
 ### 1. Install mbed-cli
 
 I recommend the manual install. Make sure to follow the instructions from mbed:
 
-> https://os.mbed.com/docs/mbed-os/v5.13/tools/manual-installation.html
+> https://os.mbed.com/docs/mbed-os/v6.1/build-tools/install-and-set-up.html
 
 If you want to use (at your own risks) Python 3, do the following:
 
 ```bash
 # for the latest stable version
-$ pip3 install -U --user mbed-cli
+$ pip3 install -U --user mbed-cli pyserial
 
 # for HEAD
 $ pip3 install -U --user https://github.com/ARMmbed/mbed-cli/archive/master.zip
