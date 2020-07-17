@@ -1,7 +1,7 @@
 BasedOnStyle: Google
 IndentWidth: 4
 TabWidth: 4
-ColumnLimit: 100
+ColumnLimit: 120
 
 Language: Cpp
 Standard: Cpp11
@@ -30,7 +30,15 @@ SpaceBeforeParens: ControlStatements
 SpaceBeforeRangeBasedForLoopColon: false
 
 UseTab: Always
-KeepEmptyLinesAtTheStartOfBlocks: true
+KeepEmptyLinesAtTheStartOfBlocks: false
+
+AllowShortFunctionsOnASingleLine: Inline
+
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterClass: true
+  AfterFunction: true
+
 
 #IndentPPDirectives: BeforeHash
 #AlignConsecutiveMacros: true
