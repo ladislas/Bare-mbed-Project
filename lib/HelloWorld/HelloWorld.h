@@ -12,6 +12,7 @@
 #define _LK_ALPHA_OS_MBED_HELLOWORLD_H_
 
 #include "mbed.h"
+#include "chrono"
 
 /**
  * @class HelloWorld
@@ -25,7 +26,7 @@ class HelloWorld {
 	 */
 	struct Data {
 		DigitalOut led;
-		uint32_t sleepTime;
+		chrono::milliseconds sleepTime;
 	};
 
   public:
@@ -34,16 +35,16 @@ class HelloWorld {
 
 	void start(void);
 
-	char const *world = "Hello, World!\n";
+	char const *world = "Hello, World!";
 
   private:
 	Thread thread1;
 	Thread thread2;
 	Thread thread3;
 
-	struct Data led1Data = {DigitalOut(LED1), 500};
-	struct Data led2Data = {DigitalOut(LED2), 1000};
-	struct Data led3Data = {DigitalOut(LED3), 1500};
+	struct Data led1Data = {DigitalOut(LED1), 500ms};
+	struct Data led2Data = {DigitalOut(LED2), 1000ms};
+	struct Data led3Data = {DigitalOut(LED3), 1500ms};
 
 	static void blink(Data *data);
 
