@@ -1,5 +1,13 @@
 # Bare mbed Project
 
+⚠️ ⚠️ ⚠️
+
+**This repository is not maintained anymore.**
+
+Development has been moved to [ladislas/mbed-cmake-template](https://github.com/ladislas/mbed-cmake-template).
+
+⚠️ ⚠️ ⚠️
+
 ## Introduction
 
 This repository can be used as a starting template for [mbed](https://github.com/ARMmbed/mbed-os) projects with sane defaults:
